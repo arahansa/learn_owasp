@@ -1,0 +1,20 @@
+
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+  datasource:
+    url: jdbc:mysql://localhost/learnowasp
+    username: learnowasp
+    password: learnowasp
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+
+spring.jpa.hibernate.ddl-auto: create
+
+logging.level:
+    com.arahansa: DEBUG
+server:
+  port: 8090
