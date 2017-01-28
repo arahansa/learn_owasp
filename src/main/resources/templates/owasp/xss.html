@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>XSS</title>
+</head>
+<body>
+
+<h3>XSS Test</h3>
+
+<script>
+    console.log("hi");
+</script>
+<span th:utext="${msg}">test...</span>
+
+<form method="post" action="./html">
+    <input type="text" name="msg" value="<script>alert(1);</script>" size="100"/>
+    <input type="submit" value="전송"/>
+</form>
+
+
+</body>
+</html>
