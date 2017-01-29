@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>XSS</title>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 
@@ -13,11 +14,12 @@
 </script>
 <span th:utext="${msg}">test...</span>
 
-<form method="post" action="./html">
-    <input type="text" name="msg" value="<script>alert(1);</script>" size="100"/>
-    <input type="submit" value="전송"/>
+<form method="post" action="./xss">
+    <input type="text" name="msg" value="" size="100"></input>
+    <input type="submit" value="전송"></input>
 </form>
 
 
 </body>
 </html>
+

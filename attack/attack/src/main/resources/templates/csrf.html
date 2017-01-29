@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>csrf</title>
+</head>
+<body>
+
+<form action="http://localhost:8090/owasp/csrf" method="post">
+    <input type="text" name="msg"/>
+    <input type="submit" value="전송"/>
+</form>
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function(){
+        $.get("/http://localhost:8090/owasp/csrf/rest", function(result){
+            console.log(result);
+        });
+    });
+</script>
+</body>
+</html>

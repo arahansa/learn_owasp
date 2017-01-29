@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class O_02_XSSController {
 
-  @GetMapping("/html")
+  @GetMapping
   public String html(){
     return "owasp/xss";
   }
 
-  @PostMapping("/html")
+  @PostMapping
   public String post(String msg, Model model){
     log.debug("msg : {}", msg);
     model.addAttribute("msg", msg);

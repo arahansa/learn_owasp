@@ -14,9 +14,11 @@ spring:
 
 spring.jpa.hibernate.ddl-auto: create
 
-logging.level:
-    .: DEBUG
-    org.springframework: DEBUG
-    com.arahansa: DEBUG
+#logging.level:
+#    .: DEBUG
+#    org.springframework: DEBUG
+#    com.arahansa: DEBUG
+#    org.thymeleaf: DEBUG
+
 server:
   port: 8090

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>csrf</title>
+</head>
+<body>
+
+
+<h3>Msg.</h3>
+<div th:each="msg : ${list}" >
+    <p th:text="${msg}">msg</p>
+</div>
+<hr>
+
+<form action="./csrf" method="post">
+    <input type="text" name="msg" />
+    <input type="submit" value="전송"/>
+</form>
+</body>
+</html>
