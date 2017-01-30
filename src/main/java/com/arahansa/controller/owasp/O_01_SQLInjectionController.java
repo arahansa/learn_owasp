@@ -1,4 +1,4 @@
-package com.arahansa.controller;
+package com.arahansa.controller.owasp;
 
 import com.arahansa.domain.User;
 import com.arahansa.repository.UserRepository;

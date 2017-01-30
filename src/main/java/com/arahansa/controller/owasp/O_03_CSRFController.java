@@ -1,12 +1,9 @@
-package com.arahansa.controller;
+package com.arahansa.controller.owasp;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,13 +37,20 @@ public class O_03_CSRFController {
     return getString(model);
   }
 
-  @CrossOrigin()
   @PostMapping
   public String post(String msg, Model model){
     log.info("msg : {}", msg);
     stringList.add(msg);
     return getString(model);
   }
+
+  @CrossOrigin(origins = "http://localhost:9090")
+  @GetMapping("/rest")
+  @ResponseBody
+  public List<String> stringList(){
+    return stringList;
+  }
+
 
   private String getString(Model model) {
     model.addAttribute("list", stringList);

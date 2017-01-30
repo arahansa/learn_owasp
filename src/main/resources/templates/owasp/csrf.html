@@ -7,15 +7,20 @@
 <body>
 
 
+<a href="http://localhost:9090/csrf" target="_blank">공격페이지로 이동</a>
+<hr>
+
 <h3>Msg.</h3>
 <div th:each="msg : ${list}" >
     <p th:text="${msg}">msg</p>
 </div>
+
 <hr>
 
 <form action="./csrf" method="post">
     <input type="text" name="msg" />
     <input type="submit" value="전송"/>
 </form>
+
 </body>
 </html>
